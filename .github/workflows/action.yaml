@@ -45,14 +45,8 @@ jobs:
       - name: load repos gitlab
         id: repos_lab
         run: |
-          list_repos=""
-          echo "Lendo repositorios do git lab"
-          for i in {0..10..2}; do
-            sleep 3
-            echo "Repositorio: $i"
-            list_repos="$list_repos $i"
-          done
-          echo "repositories=$list_repos" >> $GITHUB_OUTPUT
+          python3 scripts/load.py
+
 
       - name: Copy repos to github enterprise
         run: |
