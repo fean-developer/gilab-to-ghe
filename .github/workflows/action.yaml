@@ -1,0 +1,23 @@
+name: Migration
+
+on:
+  workflow_dispatch:
+
+jobs:
+  load_repos_gitlab:
+    runs-on: ubuntu-latest
+
+        
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: load repos gitlab
+        run: |
+          echo "Lendo repositorios do git lab"
+          for i in {0..10..2}; do
+            sleep 3
+            echo "Repositorio: $i"
+          done
+      
+      
