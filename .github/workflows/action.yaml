@@ -34,7 +34,7 @@ jobs:
           done
 
 
-  copi_repos:
+  copy_repos:
     runs-on: ubuntu-latest
 
         
