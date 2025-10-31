@@ -1,2 +1,2 @@
-def load_repos() 
+def load_repos(): 
   print(f"teste")
